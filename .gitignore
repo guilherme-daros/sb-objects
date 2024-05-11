@@ -1,2 +1,7 @@
 # text editor files
 .vscode
+
+# cmake
+build
+compile_commands.json
+.cache
