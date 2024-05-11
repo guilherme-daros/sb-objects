@@ -1,12 +1,13 @@
 #include <component/ComponentA.hpp>
 #include <component/ComponentB.hpp>
 #include <component/ComponentBuilder.hpp>
+#include <iostream>
 
 namespace infra {
 namespace component {
 
 template <>
-auto BuildComponent(const ComponentAConfig& config)
+auto BuildComponent(const ComponentAConfig &config)
     -> std::shared_ptr<ComponentA> {
   std::cout << "BuildComponent() -> std::shared_ptr<ComponentA>" << std::endl;
   auto component_a = std::make_shared<ComponentA>(config);
@@ -14,7 +15,7 @@ auto BuildComponent(const ComponentAConfig& config)
   return component_a;
 };
 
-auto BuildComponent(const ComponentBConfig& config)
+auto BuildComponent(const ComponentBConfig &config)
     -> std::shared_ptr<ComponentB> {
   std::cout << "BuildComponent() -> std::shared_ptr<ComponentB>" << std::endl;
   auto component_b = std::make_shared<ComponentB>(config);
@@ -22,5 +23,5 @@ auto BuildComponent(const ComponentBConfig& config)
   return component_b;
 };
 
-}  // namespace component
-}  // namespace infra
+} // namespace component
+} // namespace infra
