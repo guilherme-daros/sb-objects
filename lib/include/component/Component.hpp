@@ -6,7 +6,7 @@ namespace component {
 
 class Component {
  public:
-  enum class Type {};
+  enum class Type { kComponentA };
 
   ~Component() = default;
 
