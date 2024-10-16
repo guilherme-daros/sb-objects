@@ -3,7 +3,6 @@
 #include <array>
 #include <chrono>
 #include <memory>
-#include <string>
 
 namespace infra {
 namespace component {
@@ -19,7 +18,7 @@ struct ComponentBConfig {
 };
 
 template <class ComponentType, class ConfigType>
-auto BuildComponent(const ConfigType& config) -> std::shared_ptr<ComponentType>;
+auto BuildComponent(const ConfigType &config) -> std::shared_ptr<ComponentType>;
 
 }  // namespace component
 }  // namespace infra

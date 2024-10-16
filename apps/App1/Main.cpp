@@ -1,13 +1,13 @@
-#include <App1Controller.hpp>
-#include <memory>
 #include <unistd.h>
+#include <memory>
 
-int main(int argc, char const *argv[]) {
+#include "App1Controller.hpp"
+
+auto main(int argc, char const *argv[]) -> int {
   auto app = std::make_unique<App1Controller>();
 
   app->Init();
 
-  while (true)
-    pause();
+  while (true) pause();
   return 0;
 }

@@ -1,7 +1,7 @@
 #pragma once
 
-#include <component/Component.hpp>
-#include <component/ComponentBuilder.hpp>
+#include "component/Component.hpp"
+#include "component/ComponentBuilder.hpp"
 
 namespace infra {
 namespace component {
@@ -10,12 +10,13 @@ class ComponentA : public Component {
  public:
   ~ComponentA() = default;
 
-  explicit ComponentA(const ComponentAConfig& config);
+  explicit ComponentA(const ComponentAConfig &config);
+
   ComponentA() = delete;
-  ComponentA(const ComponentA& other) = delete;
-  ComponentA(ComponentA&& other) = delete;
-  ComponentA& operator=(const ComponentA& other) = delete;
-  ComponentA& operator=(ComponentA&& other) = delete;
+  ComponentA(const ComponentA &other) = delete;
+  ComponentA(ComponentA &&other) = delete;
+  ComponentA &operator=(const ComponentA &other) = delete;
+  ComponentA &operator=(ComponentA &&other) = delete;
 
   auto type() -> Type override { return Component::Type::kComponentA; };
   auto Init() -> void override;

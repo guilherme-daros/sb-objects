@@ -1,6 +1,8 @@
-cmake_minimum_required(VERSION 3.28)
+cmake_minimum_required(VERSION 3.22)
 
 set(PROJECTNAME "bigproject")
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(${PROJECTNAME} VERSION 0.1)
 
